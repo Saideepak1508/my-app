@@ -1,0 +1,30 @@
+<div class="card bg-dark text-light mb-3" *ngFor="let imdb of imdbs">
+    <div class="card-body">
+      <h3 class="text-warning">{{ imdb.movie }}</h3>
+      <p>
+        Rating: {{ imdb.rating }}
+        <span *ngFor="let star of [].constructor(Math.floor(imdb.rating))">
+          <img
+            
+          
+            src="https://img.freepik.com/free-vector/basic-star-flat-vector_78370-1483.jpg?t=st=1731987078~exp=1731990678~hmac=00eea7759f74d860c95f71b18a680f5de0693bd0b18476ebdeb1cf0ccc1ea2a1&w=740"
+            width="15px"
+            height="20px"
+
+           
+            
+          />
+        </span>
+        <!-- <span *ngIf="imdb.rating % 1 !== 0">
+          <img
+            src="https://img.freepik.com/free-vector/half-star-icon_78370-2725.jpg"
+            width="20px"
+            height="20px"
+            alt="Half Star Icon"
+          />
+        </span> -->
+      </p>
+      <a href="{{ imdb.imdb_url }}" class="btn btn-outline-warning" target="_blank">View on IMDb</a>
+    </div>
+  </div>
+  

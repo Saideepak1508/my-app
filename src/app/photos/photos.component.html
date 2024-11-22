@@ -1,0 +1,28 @@
+<!-- <div class="maincointainer">
+  <div class="cointainer mb-2 me-2" *ngFor="let photo of photos">
+    <img src="{{photo.download_url}}" alt=""  class="image" >
+    <div>
+      <p class="author"> {{photo.author}} </p>
+      <a href="photo.download_url" class="btn btn-primary downloadlink">Download</a>
+      
+    </div>
+
+
+  </div>
+</div> -->
+
+
+<div class="gallery">
+  <div *ngFor="let photo of photos" class="photo-card">
+    <div class="photo-container">
+      <img [src]="photo.download_url" [alt]="photo.author" />
+      <div class="photo-overlay">
+        <p>{{ photo.author }}</p>
+        <a [href]="photo.download_url" class="btn btn-primary" download>Download</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,16 @@
+.title{
+    font-size: large;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.thick{
+    color: black;
+}
+.lightcolor{
+    color: gray;
+}
+.cointainer{
+    
+    background-color: white;
+}

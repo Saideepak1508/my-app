@@ -1,0 +1,46 @@
+/* Wrapper to center the weather card */
+.weather-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f4f4f9; /* Optional background color */
+    margin: 0; /* Remove margin */
+  }
+  
+  /* Weather Card Styling */
+  .weather-card {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 24px;
+    max-width: 500px;
+    width: 100%; 
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Temperature Dot Styling */
+  .temperature-icon {
+    font-size: 100px;
+    margin: 16px 0;
+  }
+  
+  /* Temperature Text Styling */
+  h1 {
+    font-size: 40px;
+    color: #f39c12;
+  }
+  
+  /* Paragraph Text Styling */
+  p {
+    margin: 4px 0;
+    font-size: 18px; 
+    color: #333;
+  }
+  
+  /* Day/Night Indicator */
+  p:last-child {
+    font-weight: bold;
+  }
+  

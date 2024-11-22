@@ -1,0 +1,15 @@
+
+
+
+<div class="maincointainer">
+    <div class="container" *ngFor="let amazon of amazons">
+        <img class="image" src="{{amazon.image}}" alt="">
+        <div class="rate">
+            <span>{{amazon.rating.rate}}</span>
+        </div>
+        <h3>{{amazon.category}}</h3>
+        <h6 class="title">{{amazon.title}}</h6>
+        <h6 class="price">Rs.{{amazon.price}}</h6>
+
+    </div>
+</div>

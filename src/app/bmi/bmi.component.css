@@ -1,0 +1,31 @@
+.parent{
+    height: 100vh;
+    width: 80vw;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.child
+{
+    width: 50%;
+    height: 50%;
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+  
+}
+.cal{
+    cursor: pointer;
+    border-radius: 5px;
+    border-color: black;
+}
+.cal:hover{
+    background-color: azure;
+    color: red;
+    transform: scale(1.2);
+    transition: transform 0.7s ease-out;
+}
+

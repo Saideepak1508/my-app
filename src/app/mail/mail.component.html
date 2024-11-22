@@ -1,0 +1,10 @@
+
+<div class="maincointainer" *ngFor="let mail of mails"  [ngClass]="{'thick':mail.completed==false,'lightcolor':mail.completed==true}" >
+    
+    <div class="cointainer">
+        <label>{{mail.id}}</label>
+        <label class="title">{{mail.title}}</label>
+        
+
+    </div>
+</div>

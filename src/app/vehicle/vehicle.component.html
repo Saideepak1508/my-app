@@ -1,0 +1,96 @@
+<!-- Filter -->
+
+<input type="text" placeholder="search" [(ngModel)]="term" (keyup)="filter()">
+
+
+<!-- Sorting -->
+<select [(ngModel)]="coloum">
+    <option>Sr.No</option>
+    <option>Vehicle</option>
+    <option>manufacturer</option>
+    <option>model</option>
+    <option>type</option>
+    <option>fuel</option>
+    <option>color</option>
+    <option>image</option>
+    <option>cost</option>
+    <option>id</option>
+</select>
+
+<select [(ngModel)]="order">
+    <option value="asc">Ascending</option>
+    <option value="desc">Descending</option>
+</select>
+<button (click)="sort()">sort</button>
+
+
+
+<!-- pagination -->
+<select [(ngModel)]="limit">
+    <option>10</option>
+    <option>20</option>
+    <option>30</option>
+    <option>40</option>
+    <option>50</option>
+    <option>60</option>
+    <option>70</option>
+    <option>80</option>
+    <option>90</option>
+    <option>100</option>
+</select>
+
+<select [(ngModel)]="page">
+    <option>1</option>
+    <option >2</option>
+    <option >3</option>
+    <option>4</option>
+    <option >5</option>
+    <option>6</option>
+    <option >7</option>
+    <option>8</option>
+    <option >9</option>
+    <option>10</option>
+    
+</select>
+
+<button (click)="pagination()">Pagination</button>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Sr.No</th>
+            <th>Vehicle</th>
+            <th>manufacturer</th>
+            <th>model</th>
+            <th>type</th>
+            <th>fuel</th>
+            <th>color</th>
+            <th>image</th>
+            <th>cost</th>
+            <th>id</th>
+            <th>actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicle of vehicles ; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{vehicle.Vehicle}}</td>
+            <td>{{vehicle.manufacturer}}</td>
+            <td>{{vehicle.model}}</td>
+            <td>{{vehicle.type}}</td>
+            <td>{{vehicle.fuel}}</td>
+            <td>{{vehicle.color}}</td>
+            <td>
+                <img src="{{vehicle.image}}" alt="" width="100px">
+            </td>
+            <td>{{vehicle.cost}}</td>
+            <td>{{vehicle.id}}</td>
+            <td>
+                <button (click)="delete(vehicle.id)" class="btn btn-danger">Delete</button>
+            </td>
+
+            
+
+        </tr>
+    </tbody>
+</table>

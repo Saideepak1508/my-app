@@ -1,0 +1,21 @@
+<div class="weather-wrapper">
+    <div class="weather-card">
+      <h2>Weather in Hyderabad</h2>
+      <div
+        class="temperature-icon"
+        [ngStyle]="{ color: temperatureDotColor }"
+      >
+        ●
+    
+      
+      </div>
+      <h1>{{ weather.temperature }}°C</h1>
+      <p>Wind Speed: {{ weather.windSpeed }} km/h</p>
+      <p>
+        Wind Direction: {{ weather.windDirection }} ({{ weather.windDirectionCardinal }})
+      </p>
+      <p>{{ weather.time | date: 'medium':'UTC+11:05' }}</p>
+      <p [style.color]="isDay ? 'blue' : 'black'">{{ isDay ? 'Day time' : 'Night time' }}</p>
+    </div>
+  </div>
+  

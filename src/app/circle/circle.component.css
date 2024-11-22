@@ -1,0 +1,34 @@
+.parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+
+}
+.circle{
+    width: 40%;
+    height: 40%;
+    background-color:gray;
+    text-align: center;
+
+   
+}
+.area{
+    margin-left: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: lightblue;
+    border-radius: 5px;
+    width: 80px;
+    height: 30px;
+
+}
+.area:hover{
+    background-color: azure;
+    color: red;
+    transform: scale(1.2);
+    transition: transform 0.7s ease-out;
+
+}

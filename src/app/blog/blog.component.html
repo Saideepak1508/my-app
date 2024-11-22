@@ -1,0 +1,7 @@
+<div class="card  bg-light" *ngFor="let blog of blogs">
+    <div class="card-body  shadow p-3 mb-5 bg-body-tertiary rounded"  >
+        <h4>{{blog.title}}</h4>
+        <p>{{blog.author }} | {{blog.date_published }}</p>
+        <p>{{blog.content}}</p>
+    </div>
+  </div>

@@ -1,0 +1,40 @@
+
+<!-- Interpolation -->
+<h1>My age is {{age}}</h1>
+<h1>My name is {{name}}</h1>
+<h1>Is Indian {{isIndian}}</h1>
+
+<!-- Property binding -->
+<button [disabled]="isinvalid">Submit</button>
+
+<!-- Event binding -->
+ <button (click)="create()">Create</button>
+ <input type="text" (keyup)="typing()">
+
+ <!-- Two-way data binding -->
+  <input type="text" [(ngModel)]="phone" >
+
+
+
+  <!-- =========================================== -->
+    <h1>calcuator</h1>
+
+
+    <label for="">num1:</label>
+<input type="number" [(ngModel)]="num1">
+<br>
+<label for="">num2:</label>
+<input type="number"[(ngModel)] ="num2">
+<br>
+<button [disabled]="!num1 || !num2"   (click)="sum()">submit</button>
+<h1>{{result}}</h1>
+
+
+
+
+
+
+
+
+
+
