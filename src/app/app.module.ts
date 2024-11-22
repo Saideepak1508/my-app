@@ -31,6 +31,7 @@ import { ImdbComponent } from './imdb/imdb.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { IdentityCardComponent } from './identity-card/identity-card.component';
+import { CreateIdentitycardComponent } from './create-identitycard/create-identitycard.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { IdentityCardComponent } from './identity-card/identity-card.component';
     ImdbComponent,
     CreateVehicleComponent,
     CreateAccountComponent,
-    IdentityCardComponent
+    IdentityCardComponent,
+    CreateIdentitycardComponent
   ],
   imports: [
     BrowserModule,
