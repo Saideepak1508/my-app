@@ -17,7 +17,22 @@
         <option value="desc">Descending</option>
      </select>
 
-     <button (click)="sort()" class="btn btn-warning" onclick="">Sort</button>
+     <button (click)="sort()">Sort</button>
+
+
+     <!-- pagination -->
+     <select [(ngModel)]="limit">
+        <option>5</option>
+        <option>10</option>
+        <option>15</option>
+       
+     </select>
+     <select [(ngModel)]="page">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+     </select>
+     <button (click)="pagination()">Pagination</button>
 
 
 
@@ -50,7 +65,7 @@
            
         </div>      
         <div class="card-footer">
-            <button class="danger-btn">Delete</button>
+            <button class="danger-btn" (click)="delete(identity.id)">Delete</button>
         </div>
     </div>
 </body>
