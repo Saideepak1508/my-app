@@ -1,0 +1,8 @@
+label{
+    margin: 10px;
+    width: 60px;
+}
+
+.error{
+    color: red;
+}

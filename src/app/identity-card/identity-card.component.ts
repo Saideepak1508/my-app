@@ -14,7 +14,7 @@ export class IdentityCardComponent {
   coloum:string="";
   order:string = "";
 
-  id:string = "";
+  // id:string = "";
 
   limit:number =0;
   page:number = 0;
@@ -46,7 +46,7 @@ filter(){
 
 
 sort(){
-  // console.log(this.coloum,this.order);
+ 
   this._identityservices.getsortidentity(this.coloum,this.order).subscribe(
     (data:any)=>{
       this.identitys = data;
@@ -90,6 +90,20 @@ pagination(){
   )
 }
 
+
+submit(){
+  this._identityservices.createidentity(this.identitys.value).subscribe(
+    (data:any)=>{
+      console.log(data);
+      alert("Added Successfully");
+      this.identitys = [];
+      
+    },
+    (error:any)=>{
+      alert("Error Creating ID Card");
+    }
+  )
+}
 
 
 

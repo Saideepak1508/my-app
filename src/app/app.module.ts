@@ -31,6 +31,23 @@ import { ImdbComponent } from './imdb/imdb.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { IdentityCardComponent } from './identity-card/identity-card.component';
+import { CreateIdentitycardComponent } from './create-identitycard/create-identitycard.component';
+import { AngularComponent } from './angular/angular.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatBadgeModule} from '@angular/material/badge';
+import { MatButtonModule } from "@angular/material/button";
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import {MatButtonToggle, MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatCardModule} from '@angular/material/card';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatChipsModule} from '@angular/material/chips';
+import { CreateUserComponent } from './create-user/create-user.component';
+
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -60,7 +77,10 @@ import { IdentityCardComponent } from './identity-card/identity-card.component';
     ImdbComponent,
     CreateVehicleComponent,
     CreateAccountComponent,
-    IdentityCardComponent
+    IdentityCardComponent,
+    CreateIdentitycardComponent,
+    AngularComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,
@@ -68,6 +88,25 @@ import { IdentityCardComponent } from './identity-card/identity-card.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
+    MatBadgeModule,
+    MatButtonModule,
+    MatBottomSheetModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    
+    
+    
+    
+
+
+
+
+
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

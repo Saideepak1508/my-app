@@ -26,6 +26,9 @@ import { ImdbComponent } from './imdb/imdb.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { IdentityCardComponent } from './identity-card/identity-card.component';
+import { CreateIdentitycardComponent } from './create-identitycard/create-identitycard.component';
+import { AngularComponent } from './angular/angular.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -53,6 +56,9 @@ const routes: Routes = [
     {path:"create-vehicle", component:CreateVehicleComponent},
     {path:"create-account", component:CreateAccountComponent},
     {path:"identity_card", component:IdentityCardComponent},
+    {path:"create-identitycard", component:CreateIdentitycardComponent},
+    {path:"angular", component:AngularComponent},
+    {path:"Create-user", component:CreateUserComponent},
 
   
 
