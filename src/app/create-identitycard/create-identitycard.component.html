@@ -1,1 +1,26 @@
-<p>create-identitycard works!</p>
+<form [formGroup]="identitycardform">
+    <h1>Create Identity Card</h1>
+    <label for="School Name:">School Name:</label>
+    <input type="text" formControlName="school_name">
+    <br>
+    <label for="">Name: </label>
+    <input type="text" formControlName="name">
+    <br>
+    <label for="">Phone.No: </label>
+    <input type="number" formControlName="phone">
+    <br>
+    <label for="">DOB:</label>
+    <input type="date" formControlName="dob">
+    <br>
+    <label for="">city:</label>
+    <input type="text" formControlName="city">
+    <br>
+    <label>Email</label>
+    <input type="email" formControlName="email">
+    <br>
+    <label>Profile Pic</label>
+    <input type="text" formControlName="profile_picture">
+    
+    <button (click)="submit()" class="btn btn-primary">Submit</button>
+
+</form>

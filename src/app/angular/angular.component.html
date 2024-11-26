@@ -1,0 +1,90 @@
+<p>angular works!</p>
+
+<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<br>
+
+<button mat-raised-button color="primary"
+    matBadge="8" matBadgePosition="before" matBadgeColor="warn">
+    action
+  
+</button>
+
+
+<!-- <button> -->
+    <div matBadge="4" matBadgeOverlap="false" class="demo-section">Text with a badge</div>
+<!-- </button> -->
+
+<div matBadge="1" matBadgeSize="large" class="demo-section">Text with large badge</div>
+
+<div class="demo-section">
+    Button with a badge on the left
+    <button mat-raised-button color="primary"
+        matBadge="8" matBadgePosition="before" matBadgeColor="warn">
+        Action
+    </button>
+  </div>
+
+
+  <p>You have received a file called "cat-picture.jpeg".</p>
+
+<button mat-raised-button (click)="openBottomSheet()">Open file</button>
+
+<br>
+<div class="example-label">Raised</div>
+  <div class="example-button-row">
+    <button mat-raised-button>Basic</button>
+    <button mat-raised-button color="primary">Primary</button>
+    <button mat-raised-button color="accent">Accent</button>
+    <button mat-raised-button color="warn">Warn</button>
+    <button mat-raised-button disabled>Disabled</button>
+    <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+  </div>
+<br>
+
+<mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle value="bold">Bold</mat-button-toggle>
+    <mat-button-toggle value="italic">Italic</mat-button-toggle>
+    <mat-button-toggle value="underline">Underline</mat-button-toggle>
+  </mat-button-toggle-group>
+  <br>
+
+  <mat-card>
+    <mat-card-content>Simple card</mat-card-content>
+  </mat-card>
+  <br>
+  <section class="example-section">
+    <mat-checkbox class="example-margin">Check me!</mat-checkbox>
+    <mat-checkbox class="example-margin" [disabled]="true">Disabled</mat-checkbox>
+  </section>
+  
+  <section class="example-section">
+    <span class="example-list-section">
+      <mat-checkbox class="example-margin"
+                    [checked]="allComplete"
+                    [color]="task.color"
+                    [indeterminate]="someComplete()"
+                    (change)="setAll($event.checked)">
+        {{task.name}}
+      </mat-checkbox>
+    </span>
+    <span class="example-list-section">
+      <ul>
+        <li *ngFor="let subtask of task.subtasks">
+          <mat-checkbox [(ngModel)]="subtask.completed"
+                        [color]="subtask.color"
+                        (ngModelChange)="updateAllComplete()">
+            {{subtask.name}}
+          </mat-checkbox>
+        </li>
+      </ul>
+    </span>
+  </section>
+
+
+  <mat-chip-listbox aria-label="Fish selection">
+    <mat-chip-option>One fish</mat-chip-option>
+    <mat-chip-option>Two fish</mat-chip-option>
+    <mat-chip-option color="accent" selected>Accent fish</mat-chip-option>
+    <mat-chip-option color="warn">Warn fish</mat-chip-option>
+  </mat-chip-listbox>
+  

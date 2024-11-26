@@ -91,6 +91,20 @@ pagination(){
 }
 
 
+submit(){
+  this._identityservices.createidentity(this.identitys.value).subscribe(
+    (data:any)=>{
+      console.log(data);
+      alert("Added Successfully");
+      this.identitys = [];
+      
+    },
+    (error:any)=>{
+      alert("Error Creating ID Card");
+    }
+  )
+}
+
 
 
 

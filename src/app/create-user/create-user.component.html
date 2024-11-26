@@ -1,0 +1,98 @@
+<p>create-user works!</p>
+
+
+<form [formGroup]="userform">
+    <label for="">Name: </label>
+    <input type="text" formControlName="name" >
+
+    <div *ngIf="userform.get('name')?.touched && userform.get('name')?.invalid">
+        <p class="error" *ngIf="userform.get('name')?.errors?.['required']">Name is required</p>
+        <p class="error" *ngIf="userform.get('name')?.errors?.['minlength']">Minimum 3 Characters</p>
+        <p class="error" *ngIf="userform.get('name')?.errors?.['maxlength']">maximum 10 characters</p>
+    </div>
+    <br>
+    <label for="">Age: </label>
+    <input type="number" formControlName="age" >
+
+    <div *ngIf="userform.get('age')?.touched && userform.get('age')?.invalid">
+        <p class="error" *ngIf="userform.get('age')?.errors?.['required']">Age is required</p>
+        <p class="error" *ngIf="userform.get('age')?.errors?.['min']">Minimum 18 yeras</p>
+        <p class="error" *ngIf="userform.get('age')?.errors?.['max']">maximum 60 years</p>
+    </div>
+
+
+    
+    <br>
+    <label for="">Email: </label>
+    <input type="text" formControlName="email" >
+    <br>
+    <label for="">Phone: </label>
+    <input type="text" formControlName="phone" >
+    <br>
+
+    <div formGroupName="address" >
+        <label for="">City: </label>
+        <input type="text" formControlName="city" >
+        <br>
+        <label for="">Pincode: </label>
+        <input type="number" formControlName="pincode" >
+    </div>
+
+    <label for="">Type:</label>
+    <input type="radio" name="type" formControlName="type" value="dayScholar">
+    <label for="">DayScholar</label>
+    <input type="radio" name="type" formControlName="type" value="residential">
+    <label for="">Residential</label>
+    <br>
+
+    <div *ngIf="userform.get('type')?.value=='dayScholar'">
+
+        <label for="">Bus Fee: </label>
+        <input type="number" formControlName="busFee" >
+
+    </div>
+    
+        <br>
+
+
+    <div *ngIf="userform.get('type')?.value=='residential'">
+        <label for="">Hostel Fee: </label>
+        <input type="number" formControlName="hostelFee" >
+     </div>
+
+    <div>
+
+
+    </div>
+<label for="">Cards</label>
+<button class="btn btn-info" (click)="addCard()">Add Card</button>
+<br><br>
+
+
+<div formArrayName="cards" >
+    <div *ngFor="let card of cardsFormArray.controls;let i=index">
+        <div formGroupName="{{i}}" >
+            <h2>Card{{i+1}}</h2>
+
+            <label for="">Number: </label>
+            <input type="number" formControlName="number">
+            
+            <br>
+            <label for="">Expiry: </label>
+            <input type="month" formControlName="expiry">
+            <br>
+            <label for="">CVV: </label>
+            <input type="number" formControlName="cvv" >
+            <br>
+            <button class="btn btn-danger" (click)="deleteCard(i)">Delete</button>
+
+            <hr>
+
+        </div>
+    </div>
+</div>
+
+
+
+    <button (click)="submit()"  class="btn btn-warning">Submit</button>
+</form>
