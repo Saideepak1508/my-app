@@ -43,6 +43,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatChipsModule} from '@angular/material/chips';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { StudentFormComponent } from './student-form/student-form.component';
+
 
 
 
@@ -80,7 +82,8 @@ import { CreateUserComponent } from './create-user/create-user.component';
     IdentityCardComponent,
     CreateIdentitycardComponent,
     AngularComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    StudentFormComponent
   ],
   imports: [
     BrowserModule,

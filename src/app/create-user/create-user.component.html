@@ -2,6 +2,8 @@
 
 
 <form [formGroup]="userform">
+
+    <!-- Name -->
     <label for="">Name: </label>
     <input type="text" formControlName="name" >
 
@@ -11,6 +13,8 @@
         <p class="error" *ngIf="userform.get('name')?.errors?.['maxlength']">maximum 10 characters</p>
     </div>
     <br>
+
+    <!-- Age -->
     <label for="">Age: </label>
     <input type="number" formControlName="age" >
 
@@ -20,19 +24,38 @@
         <p class="error" *ngIf="userform.get('age')?.errors?.['max']">maximum 60 years</p>
     </div>
 
-
+    <!-- Email -->
     
     <br>
     <label for="">Email: </label>
     <input type="text" formControlName="email" >
+    <div *ngIf="userform.get('email')?.touched && userform.get('email')?.invalid">
+        <p class="error" *ngIf="userform.get('email')?.errors?.['required']">Email is invalid</p>
+        <p class="error" *ngIf="userform.get('email')?.errors?.['min']">Invalid email format</p>
+    </div>
     <br>
+
+    <!-- Phone -->
+
     <label for="">Phone: </label>
-    <input type="text" formControlName="phone" >
+    <input type="number" formControlName="phone" >
+    
+        <div *ngIf="userform.get('phone')?.touched && userform.get('phone')?.invalid">
+            <p class="error" *ngIf="userform.get('phone')?.errors?.['required']">Phone is required</p>
+            <p class="error" *ngIf="userform.get('phone')?.errors?.['min']">Minimum 10 digits</p>
+            <p class="error" *ngIf="userform.get('phone')?.errors?.['max']">maximum 10 digits</p>
+        </div>
+    
     <br>
 
     <div formGroupName="address" >
         <label for="">City: </label>
         <input type="text" formControlName="city" >
+        <div *ngIf="userform.get('address')?. get('city')?. touched && userform.get('address')?.get('city')?.invalid">
+            <p class="error" *ngIf="userform.get('address')?.get('city')?.errors?.['required']">City is required</p>
+            
+        </div>
+        
         <br>
         <label for="">Pincode: </label>
         <input type="number" formControlName="pincode" >
@@ -64,18 +87,21 @@
 
 
     </div>
-<label for="">Cards</label>
-<button class="btn btn-info" (click)="addCard()">Add Card</button>
-<br><br>
+  <label for="">Cards</label>
+   <button class="btn btn-info" (click)="addCard()">Add Card</button>
+    <br><br>
 
 
-<div formArrayName="cards" >
+   <div formArrayName="cards" >
     <div *ngFor="let card of cardsFormArray.controls;let i=index">
         <div formGroupName="{{i}}" >
             <h2>Card{{i+1}}</h2>
 
             <label for="">Number: </label>
             <input type="number" formControlName="number">
+            <div *ngIf="cardsFormArray.controls[i]?.get('number')?.touched && cardsFormArray.controls[i]?.get('number')?.invalid">
+                <p class="error"*ngIf="cardsFormArray.controls[i]?.get('number')?.errors?.['required']" >Number is required</p>
+            </div>
             
             <br>
             <label for="">Expiry: </label>
@@ -90,7 +116,7 @@
 
         </div>
     </div>
-</div>
+   </div>
 
 
 
