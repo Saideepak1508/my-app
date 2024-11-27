@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-login',
@@ -13,9 +15,20 @@ export class LoginComponent {
 
   } )
 
+  constructor(private _loginservices:LoginService) { }
 
   login(){
     console.log(this.loginForm);
+    this._loginservices.login(this.loginForm.value).subscribe(
+      (data:any) => {
+        alert("Login Success!!!")
+      },
+      (error:any) => {
+        alert("Invalid Credentials")
+      }
+    )
+  
+
   }
 
 }
