@@ -38,6 +38,7 @@ export class AngularComponent {
   };
 
   allComplete: boolean = false;
+  
 
   updateAllComplete() {
     this.allComplete = this.task.subtasks != null && this.task.subtasks.every(t => t.completed);

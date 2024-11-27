@@ -29,6 +29,7 @@ import { IdentityCardComponent } from './identity-card/identity-card.component';
 import { CreateIdentitycardComponent } from './create-identitycard/create-identitycard.component';
 import { AngularComponent } from './angular/angular.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { StudentFormComponent } from './student-form/student-form.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -59,6 +60,7 @@ const routes: Routes = [
     {path:"create-identitycard", component:CreateIdentitycardComponent},
     {path:"angular", component:AngularComponent},
     {path:"Create-user", component:CreateUserComponent},
+    {path:"student-form", component:StudentFormComponent},
 
   
 

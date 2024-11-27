@@ -1,0 +1,114 @@
+<form [formGroup]="studentform" (ngSubmit)="submit()">
+    <!-- Name -->
+    <label for="name">Name:</label>
+    <input type="text" formControlName="name">
+    <div *ngIf="studentform.get('name')?.touched && studentform.get('name')?.invalid">
+      <p class="error" *ngIf="studentform.get('name')?.errors?.['required']">Name is required</p>
+      <p class="error" *ngIf="studentform.get('name')?.errors?.['minlength']">Minimum 3 characters required</p>
+      <p class="error" *ngIf="studentform.get('name')?.errors?.['maxlength']">Maximum 10 characters allowed</p>
+    </div>
+    <br>
+  
+    <!-- Class -->
+    <label for="class">Class:</label>
+    <input type="text" formControlName="class">
+    <div *ngIf="studentform.get('class')?.touched && studentform.get('class')?.invalid">
+      <p class="error" *ngIf="studentform.get('class')?.errors?.['required']">Class is required</p>
+      <p class="error" *ngIf="studentform.get('class')?.errors?.['pattern']">Only alphanumeric characters are allowed</p>
+    </div>
+    <br>
+  
+    <!-- Father's Name -->
+    <label for="fatherName">Father Name:</label>
+    <input type="text" formControlName="fatherName">
+    <div *ngIf="studentform.get('fatherName')?.touched && studentform.get('fatherName')?.invalid">
+      <p class="error" *ngIf="studentform.get('fatherName')?.errors?.['required']">Father's name is required</p>
+      <p class="error" *ngIf="studentform.get('fatherName')?.errors?.['minlength']">Minimum 3 characters required</p>
+    </div>
+    <br>
+  
+    <!-- Email -->
+    <label for="email">Email:</label>
+    <input type="text" formControlName="email">
+    <div *ngIf="studentform.get('email')?.touched && studentform.get('email')?.invalid">
+      <p class="error" *ngIf="studentform.get('email')?.errors?.['required']">Email is required</p>
+      <p class="error" *ngIf="studentform.get('email')?.errors?.['email']">Invalid email format</p>
+    </div>
+    <br>
+  
+    <!-- Date of Birth-->
+    <label for="dob">DOB:</label>
+    <input type="date" formControlName="dob">
+    <div *ngIf="studentform.get('dob')?.touched && studentform.get('dob')?.invalid">
+      <p class="error" *ngIf="studentform.get('dob')?.errors?.['required']">Date of Birth is required</p>
+    </div>
+    <br>
+  
+    <!-- Address  -->
+    <div formGroupName="address">
+      <label for="addressline">Address Line:</label>
+      <input type="text" formControlName="addressline">
+      <div *ngIf="studentform.get('address.addressline')?.touched && studentform.get('address.addressline')?.invalid">
+        <p class="error" *ngIf="studentform.get('address.addressline')?.errors?.['required']">Address Line is required</p>
+        <p class="error" *ngIf="studentform.get('address.addressline')?.errors?.['minlength']">Minimum 5 characters required</p>
+      </div>
+      <br>
+
+      <!-- City -->
+  
+      <label for="city">City:</label>
+      <input type="text" formControlName="city">
+      <div *ngIf="studentform.get('address.city')?.touched && studentform.get('address.city')?.invalid">
+        <p class="error" *ngIf="studentform.get('address.city')?.errors?.['required']">City is required</p>
+      </div>
+      <br>
+      <!-- State -->
+  
+      <label for="state">State:</label>
+      <input type="text" formControlName="state">
+      <div *ngIf="studentform.get('address.state')?.touched && studentform.get('address.state')?.invalid">
+        <p class="error" *ngIf="studentform.get('address.state')?.errors?.['required']">State is required</p>
+      </div>
+      <br>
+  <!-- pincode -->
+
+      <label for="pincode">Pincode:</label>
+      <input type="number" formControlName="pincode">
+      <div *ngIf="studentform.get('address.pincode')?.touched && studentform.get('address.pincode')?.invalid">
+        <p class="error" *ngIf="studentform.get('address.pincode')?.errors?.['required']">Pincode is required</p>
+        <p class="error" *ngIf="studentform.get('address.pincode')?.errors?.['pattern']">Pincode must be 6 digits</p>
+      </div>
+    </div>
+    <br>
+  
+    <!-- Marks Section & Add marks button  -->
+    <label for="marks">Marks</label>
+    <button type="button" (click)="addMarks()" class="btn btn-primary">Add Marks</button>
+    <br>
+  
+    <div formArrayName="marks">
+      <div *ngFor="let mark of marksFormArray.controls; let i = index">
+        <div [formGroupName]="i">
+          <label for="marks">Marks:</label>
+          <input type="number" formControlName="marks">
+          <br>
+  
+          <label for="year">Year:</label>
+          <input type="number" formControlName="year">
+          <br>
+  
+          <label for="percentage">Percentage:</label>
+          <input type="number" formControlName="percentage">
+          <br>
+          <!-- Delete Button -->
+  
+          <button type="button" (click)="delete(i)" class="btn btn-danger">Delete</button>
+          <hr>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-info">Submit</button>
+  </form>
+  
