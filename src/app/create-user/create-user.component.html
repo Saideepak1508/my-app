@@ -92,7 +92,7 @@
     <br><br>
 
 
-   <div formArrayName="cards" >
+   <div formGroupName="cards" >
     <div *ngFor="let card of cardsFormArray.controls;let i=index">
         <div formGroupName="{{i}}" >
             <h2>Card{{i+1}}</h2>
