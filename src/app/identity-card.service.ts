@@ -13,6 +13,10 @@ export class IdentityCardService {
     return this._httpclient.get('https://6128991386a213001729f9df.mockapi.io/test/v1/student');
   }
 
+  getidentitys(id:string): Observable<any> {
+    return this._httpclient.get('https://6128991386a213001729f9df.mockapi.io/test/v1/student/'+id);
+  }
+
   deleteidentity(id:string): Observable<any>{
     return this._httpclient.delete("https://6128991386a213001729f9df.mockapi.io/test/v1/student/"+id);
   }
@@ -36,6 +40,9 @@ export class IdentityCardService {
     return this._httpclient.post('https://6128991386a213001729f9df.mockapi.io/test/v1/student',data);
   }
 
+  updateidentity(id:string,data:any): Observable<any> {
+    return this._httpclient.put('https://6128991386a213001729f9df.mockapi.io/test/v1/student/'+id,data);
+  }
 
 
 

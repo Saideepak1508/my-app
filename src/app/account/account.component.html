@@ -74,6 +74,8 @@
             <td>{{account.id}}</td>
             <td> 
                 <button (click)="delete(account.id)">Delete</button>
+                <button routerLink="/dashboard/account-details/{{account.id}}" btn btn-warning >View</button>
+                <button routerLink="/dashboard/edit-account/{{account.id}}" btn btn-info >Edit</button>
             </td>
 
         </tr>

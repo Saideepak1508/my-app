@@ -45,6 +45,8 @@ import {MatChipsModule} from '@angular/material/chips';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 import { VechioleDetailsComponent } from './vechile-details/vechile-details.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
+import { IdentityCardDetailsComponent } from './identity-card-details/identity-card-details.component';
 
 
 
@@ -85,7 +87,9 @@ import { VechioleDetailsComponent } from './vechile-details/vechile-details.comp
     AngularComponent,
     CreateUserComponent,
     StudentFormComponent,
-    VechioleDetailsComponent
+    VechioleDetailsComponent,
+    AccountDetailsComponent,
+    IdentityCardDetailsComponent
   ],
   imports: [
     BrowserModule,

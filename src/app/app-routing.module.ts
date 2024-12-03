@@ -32,6 +32,8 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { VechioleDetailsComponent } from './vechile-details/vechile-details.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
+import { IdentityCardDetailsComponent } from './identity-card-details/identity-card-details.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -65,6 +67,10 @@ const routes: Routes = [
     {path:"student-form", component:StudentFormComponent},
     {path:"vechile-details/:id", component:VechioleDetailsComponent},
     {path:"edit-vehicle/:id", component:CreateVehicleComponent},
+    {path:"account-details/:id", component:AccountDetailsComponent},
+    {path:"edit-account/:id", component:CreateAccountComponent},
+    {path:"identity-card-details/:id", component:IdentityCardDetailsComponent},
+    {path:"edit-identity-card/:id", component:CreateIdentitycardComponent},
 
   
 

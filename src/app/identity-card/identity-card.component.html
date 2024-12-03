@@ -66,6 +66,9 @@
         </div>      
         <div class="card-footer">
             <button class="danger-btn" (click)="delete(identity.id)">Delete</button>
+            <button routerLink="/dashboard/identity-card-details/{{identity.id}}"  class="btn btn-warning">View</button>
+            <button routerLink="/dashboard/edit-identity-card/{{identity.id}}"  class="btn btn-info">Edit</button>
+
         </div>
     </div>
 </body>

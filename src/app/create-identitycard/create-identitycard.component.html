@@ -1,5 +1,8 @@
 <form [formGroup]="identitycardform">
-    <h1>Create Identity Card</h1>
+    <h1>{{ id? 'Edit identity Card':'Create Identity Card'}}</h1>
+
+    <!-- <h1 *ngIf="id">Edit Identity Card</h1>
+    <h1 *ngIf="!id">Create Identity Card</h1> -->
     <label for="School Name:">School Name:</label>
     <input type="text" formControlName="school_name">
     <br>

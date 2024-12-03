@@ -11,6 +11,9 @@ export class AccountService {
   getAccount():Observable<any>{
     return this._httpClient.get('https://6128991386a213001729f9df.mockapi.io/test/v1/principals');
 }
+getAccounts(id:string):Observable<any>{
+  return this._httpClient.get('https://6128991386a213001729f9df.mockapi.io/test/v1/principals/'+id);
+}
 
 getfilterAccountservice(term:string): Observable<any>{
   return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals?filter="+term);
@@ -35,6 +38,11 @@ deleteAccount(id:string): Observable<any>{
 CreateAccount(data:any): Observable<any>{
   return this._httpClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/",data);
 }
+
+updateAccount(id:string, data:any): Observable<any>{
+  return this._httpClient.put("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/"+id,data);
+}
+
 
 
 
