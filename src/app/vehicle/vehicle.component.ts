@@ -16,7 +16,7 @@ export class VehicleComponent {
 
 
   constructor(private _vechileService:VehicleService){
-    _vechileService.getvechile().subscribe(
+    _vechileService.getvehicles().subscribe(
       (data:any) =>{
         this.vehicles=data;
       },
