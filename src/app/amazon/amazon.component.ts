@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { AmazonService } from '../amazon.service';
 
 @Component({
@@ -7,6 +7,7 @@ import { AmazonService } from '../amazon.service';
   styleUrls: ['./amazon.component.css']
 })
 export class AmazonComponent {
+  @Input() rating:number = 0;
   amazons:any = [];
   constructor(private _amazonservice:AmazonService) {
     _amazonservice.getamazon().subscribe(

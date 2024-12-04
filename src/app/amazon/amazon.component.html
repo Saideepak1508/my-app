@@ -6,6 +6,8 @@
         <img class="image" src="{{amazon.image}}" alt="">
         <div class="rate">
             <span>{{amazon.rating.rate}}</span>
+            <app-rating [rating]="amazon.rating.rate"> </app-rating>
+            
         </div>
         <h3>{{amazon.category}}</h3>
         <h6 class="title">{{amazon.title}}</h6>

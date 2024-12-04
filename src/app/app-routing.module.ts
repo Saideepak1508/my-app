@@ -34,6 +34,9 @@ import { AuthenticationGuard } from './authentication.guard';
 import { VechioleDetailsComponent } from './vechile-details/vechile-details.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { IdentityCardDetailsComponent } from './identity-card-details/identity-card-details.component';
+import { ParentComponent } from './parent/parent.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { SiblingsComponent } from './siblings/siblings.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -71,6 +74,8 @@ const routes: Routes = [
     {path:"edit-account/:id", component:CreateAccountComponent},
     {path:"identity-card-details/:id", component:IdentityCardDetailsComponent},
     {path:"edit-identity-card/:id", component:CreateIdentitycardComponent},
+    {path:"parent",component:ParentComponent},
+    {path:"siblings",component:SiblingsComponent},
 
   
 
