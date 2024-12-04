@@ -47,6 +47,12 @@ import { StudentFormComponent } from './student-form/student-form.component';
 import { VechioleDetailsComponent } from './vechile-details/vechile-details.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { IdentityCardDetailsComponent } from './identity-card-details/identity-card-details.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { RatingComponent } from './rating/rating.component';
+import { SiblingsComponent } from './siblings/siblings.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
 
 
 
@@ -89,7 +95,13 @@ import { IdentityCardDetailsComponent } from './identity-card-details/identity-c
     StudentFormComponent,
     VechioleDetailsComponent,
     AccountDetailsComponent,
-    IdentityCardDetailsComponent
+    IdentityCardDetailsComponent,
+    ParentComponent,
+    ChildComponent,
+    RatingComponent,
+    SiblingsComponent,
+    Sibling1Component,
+    Sibling2Component
   ],
   imports: [
     BrowserModule,
