@@ -2,3 +2,13 @@
 <button (click)="send()" class="btn btn-info" >Send</button>
 
 
+
+<textarea (input)="onInput()" [maxLength]="max" [(ngModel)]="text">
+
+</textarea>
+<div class="char-count">
+    {{ text.length }}/{{ max }} characters
+  </div>
+
+
+  
